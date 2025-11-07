@@ -12,6 +12,11 @@ class ItemsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Set title before draw so it persists to display.  Only way to keep from the first attempt not working.
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
 
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 65
